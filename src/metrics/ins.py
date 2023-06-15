@@ -72,8 +72,8 @@ def eval_features(probs, labels, data_loader, num_features, split, is_acc, is_to
             top1 = top_k_accuracy_score([i + 1 for i in converted_labels], probs[:, 0:1001].detach().cpu().numpy(), k=1, labels=range(1001))
             top5 = top_k_accuracy_score([i + 1 for i in converted_labels], probs[:, 0:1001].detach().cpu().numpy(), k=5, labels=range(1001))
         else:
-            top1 = top_k_accuracy_score([i + 1 for i in converted_labels], probs[:, 1:1001].detach().cpu().numpy(), k=1)
-            top5 = top_k_accuracy_score([i + 1 for i in converted_labels], probs[:, 1:1001].detach().cpu().numpy(), k=5)
+            top1 = top_k_accuracy_score([i + 1 for i in converted_labels], probs[:, 1:41].detach().cpu().numpy(), k=1)
+            top5 = top_k_accuracy_score([i + 1 for i in converted_labels], probs[:, 1:41].detach().cpu().numpy(), k=5)
     else:
         pass
     return m_scores, m_std, top1, top5

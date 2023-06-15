@@ -1,0 +1,10 @@
+CUDA_VISIBLE_DEVICES=0,1 python3 src/main.py -t -hdf5 -l -sync_bn -std_stat \
+-metrics is fid prdc \
+-ref "train" \
+-cfg ./src/configs/ImageNet_40/ACGAN-Big-Mod-256.yaml \
+-data /media/exx/HDD1/LanxHuyen/CVPR2017/imagenet_full \
+-save ./results \
+-mpc \
+--pre_resizer "lanczos" \
+--post_resizer "friendly" \
+--eval_backbone "InceptionV3_tf"

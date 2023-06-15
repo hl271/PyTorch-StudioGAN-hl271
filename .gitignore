@@ -12,3 +12,8 @@ wandb/
 test/
 *.csv
 *.npy
+
+results/feats/*
+results/moments/*
+results/figures/*
+results/checkpoints/*
