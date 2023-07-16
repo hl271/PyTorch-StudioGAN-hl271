@@ -2,7 +2,7 @@
 # The MIT License (MIT)
 # See license file or visit https://github.com/POSTECH-CVLab/PyTorch-StudioGAN for details
 
-# src/worker.py
+# src/worker.py => trainer for GAN
 
 from os.path import join
 import sys

@@ -1,4 +1,9 @@
-CUDA_VISIBLE_DEVICES=0,1 python3 src/main.py -t -hdf5 -l -sync_bn -std_stat \
+CUDA_VISIBLE_DEVICES=0,1 python3 src/main.py \
+-t \ `#train`
+-hdf5 \ `#load train images from a hdf5 file`
+-l \ `#load the whold train dataset on main memory`
+-sync_bn \ `#turn on synchronized batchnorm`
+-std_stat \ `#apply standing statistics for evaluation`
 -metrics is fid prdc \
 -ref "train" \
 -cfg ./src/configs/ImageNet_40/BigGAN-256.yaml \
